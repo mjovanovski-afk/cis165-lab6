@@ -36,3 +36,26 @@ Red + Blue (any order): purple
 Red + Yellow (any order): orange
 
 Blue + Yellow (any order): green
+
+HOW TO RUN AND COMPILE
+
+OnlineGDB Steps:
+
+Go to onlinegdb.com and select C++17 from the top right menu.
+
+Paste code into the editor window.
+
+Click the green Run button.
+
+BMI Tests
+
+Program/test | Inputs | Expected result | Actual result | Match or correction
+BMI Test 1 | 100, 70 | 14.35 — Underweight | BMI: 14.35 - Underweight | Match
+BMI Test 2 | 150, 70 | 21.52 — Optimal weight | BMI: 21.52 - Optimal weight | Match
+BMI Test 3 | 200, 70 | 28.69 — Overweight | BMI: 28.69 - Overweight | Match
+BMI Test 4 | 150, 0 | Error: weight and height must be positive. | Error: weight and height must be positive. | Match
+BMI Test 5 | -150, 70 | Error: weight and height must be positive. | Error: weight and height must be positive. | Match
+BMI Extra | 129, 60 | 25.19 — Overweight | BMI: 25.19 - Overweight | Match (Checks boundary just over 25.0)
+
+Why 18.5 and 25.0 belong in Optimal weight:
+The instructions define optimal weight as 18.5 through 25.0 including both endpoints. Using "else if (bmi <= 25.0)" right after checking "bmi < 18.5" catches both exact boundary numbers correctly without leaving gaps.
