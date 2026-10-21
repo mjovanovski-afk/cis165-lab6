@@ -75,3 +75,28 @@ Color Mixer Tests
 | Color Mixer Extra | yellow, yellow | yellow | yellow | Match (Checks identical yellow inputs) |
 
 ---
+4. Explanations
+
+1. BMI Formula and Height Squaring:
+The 703.0 turns standard measurements (pounds and inches) into a proper BMI number. To square the height, we just multiply height by height. We do not use the ^ symbol because in C++ that symbol does a math trick on computer bits, not exponents.
+
+2. Boundary Conditions (18.5 and 25.0):
+We check if the BMI is less than 18.5 first. If it is not, the computer moves to the next line: checking if it is less than or equal to 25.0. This automatically catches everything from 18.5 through 25.0 for optimal weight. Anything higher goes straight to overweight.
+
+3. Early Input Checking:
+We check the user's numbers right away to stop bad math before it happens. If someone enters 0 for height, calculating BMI would mean dividing by zero, which crashes the program.
+
+4. Unrounded Classification vs Rounded Display:
+We check the category using the raw, exact BMI number before rounding it for the screen. If a BMI is 25.004, it is technically overweight. If we rounded it to 25.00 first, the computer would think it is optimal weight, which is wrong.
+
+5. strcmp vs ==:
+Using == on words checks where the word is stored in the computer memory instead of reading the letters. The strcmp function actually reads the word letter by letter and gives back 0 when the words match completely.
+
+6. Order Independence and Same Colors:
+If both inputs are identical, the program just outputs that same color. For different colors, we check both ways using OR. For example, we check if the user typed red then blue, OR if they typed blue then red, so either order gives purple.
+
+7. Invalid Color Checking:
+We set up simple checks to see if the first input is valid and if the second input is valid. If either color is wrong, the program prints an error message and stops right away.
+
+8. Constants and Result Variables:
+Using named storage for numbers stops us from using random "magic numbers" in our code. It keeps the code clean, easy to read, and prevents accidental buffer mistakes.
