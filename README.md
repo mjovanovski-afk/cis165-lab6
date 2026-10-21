@@ -20,3 +20,19 @@ bmi < 18.5: Underweight
 bmi > 25.0: Overweight
 
 Output: Display BMI formatted to 2 decimal places using fixed and setprecision(2) alongside its category.
+
+Program 2: Color Mixer (color_mixer.cpp)
+
+Inputs: first_color (char array size 20), second_color (char array size 20).
+
+Validation Check: Compare each input against "red", "blue", and "yellow" using strcmp. If either input is invalid, display an error message and exit.
+
+Mixing Rules:
+
+Same primary color: Output that color.
+
+Red + Blue (any order): purple
+
+Red + Yellow (any order): orange
+
+Blue + Yellow (any order): green
